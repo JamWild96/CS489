@@ -1,0 +1,141 @@
+\documentclass[12pt,letterpaper]{article}
+
+% just for the example
+\usepackage{lipsum}
+% Set margins to 1.5in
+\usepackage[margin=1.5in]{geometry}
+
+% for graphics
+\usepackage{graphicx}
+
+% for crimson text
+\usepackage{crimson}
+\usepackage[T1]{fontenc}
+
+% setup parameter indentation
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+% for 1.15 spacing between text
+\renewcommand{\baselinestretch}{1.15}
+
+% For defining spacing between headers
+\usepackage{titlesec}
+% Level 1
+\titleformat{\section}
+  {\normalfont\fontsize{18}{0}\bfseries}{\thesection}{1em}{}
+% Level 2
+\titleformat{\subsection}
+  {\normalfont\fontsize{14}{0}\bfseries}{\thesection}{1em}{}
+% Level 3
+\titleformat{\subsubsection}
+  {\normalfont\fontsize{12}{0}\bfseries}{\thesection}{1em}{}
+% Level 4
+\titleformat{\paragraph}
+  {\normalfont\fontsize{12}{0}\bfseries\itshape}{\theparagraph}{1em}{}
+% Level 5
+\titleformat{\subparagraph}
+  {\normalfont\fontsize{12}{0}\itshape}{\theparagraph}{1em}{}
+% Level 6
+\makeatletter
+\newcounter{subsubparagraph}[subparagraph]
+\renewcommand\thesubsubparagraph{%
+  \thesubparagraph.\@arabic\c@subsubparagraph}
+\newcommand\subsubparagraph{%
+  \@startsection{subsubparagraph}    % counter
+    {6}                              % level
+    {\parindent}                     % indent
+    {12pt}                           % beforeskip
+    {6pt}                            % afterskip
+    {\normalfont\fontsize{12}{0}}}
+\newcommand\l@subsubparagraph{\@dottedtocline{6}{10em}{5em}}
+\newcommand{\subsubparagraphmark}[1]{}
+\makeatother
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+\titlespacing*{\subsection}{0pt}{12pt}{6pt}
+\titlespacing*{\subsubsection}{0pt}{12pt}{6pt}
+\titlespacing*{\paragraph}{0pt}{12pt}{6pt}
+\titlespacing*{\subparagraph}{0pt}{12pt}{6pt}
+\titlespacing*{\subsubparagraph}{0pt}{12pt}{6pt}
+
+% Set caption to correct size and location
+\usepackage[tableposition=top, figureposition=bottom, font=footnotesize, labelfont=bf]{caption}
+
+% set page number location
+\usepackage{fancyhdr}
+\fancyhf{} % clear all header and footers
+\renewcommand{\headrulewidth}{0pt} % remove the header rule
+\rhead{\thepage}
+\pagestyle{fancy}
+
+% Overwrite Title
+\makeatletter
+\renewcommand{\maketitle}{\bgroup
+   \begin{center}
+   \textbf{{\fontsize{18pt}{20}\selectfont \@title}}\\
+   \vspace{10pt}
+   {\fontsize{12pt}{0}\selectfont \@author}
+   \\ \today
+
+   \end{center}
+\egroup}
+\makeatother
+
+% Used for Tables and Figures
+\usepackage{float}
+
+% For using lists
+\usepackage{enumitem}
+
+% For full citations inline
+\usepackage{bibentry}
+\nobibliography*
+
+% Custom Quote
+\newenvironment{myquote}[1]%
+  {\list{}{\leftmargin=#1\rightmargin=#1}\item[]}%
+  {\endlist}
+
+% Create Abstract
+\renewenvironment{abstract}
+{\vspace*{-.5in}\fontsize{12pt}{12}\begin{myquote}{.5in}
+\noindent \par{\bfseries \abstractname.}}
+{\medskip\noindent
+\end{myquote}
+}
+
+% Set Title, Author, and email
+\title{Patents and Litigation in the Video Game Industry}
+\author{Ryan Gallagher,
+\\ Jam Wilder,
+\\ Austin Snyder,
+\\ Sean Gallaway}
+\date{\today}
+
+\begin{document}
+\date{\today}
+\maketitle
+\thispagestyle{fancy}
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{url}
+
+\section{Abstract}
+The video game industry is no stranger to wild legal battles. Just as there are patent battles and controversies in any other industry, there are many in the video game industry. What makes these special is that in so many cases, the legal process flies in the face of what the everyday consumer wants. In this paper, we explore three famous legal battles in which the masses can't enjoy widely popular games and mechanics. These cases being:
+\begin{itemize}
+    \item Nintendo vs PocketPair (The Palworld Lawsuit).
+    \item Warner Bros filing a patent over the widely popular Nemesis System.
+    \item PUBG vs Epic Games.
+\end{itemize}
+\par All of these cases have wide implications. PUBG suing Epic Games, those are two of the most popular video games currently, with Fortnite (Epic Games product which caused the lawsuit) being the most popular game in the world. PUBG is essentially suing because the gameplay is strikingly similar. The Nintendo lawsuit is also interesting, in this case, they are suing a similar game, Palworld, on the basis that they hold a patent for throwing a ball to catch creatures in a digital environment. The games are similar no doubt, but with such a broad patent will be interesting to see how the case develops. Perhaps the most infuriating patent case is that of Warner Bros with their Nemesis system. The Nemesis system involved defeating enemies, who then learn the player's patterns and behaviors, and adapt to that for subsequent encounters. It was widely beloved, but now sits idly by until the year 2036 while it is under patent.
+\par Common to all of these situations, the consumer is being deprived of a fun experience by the patent laws which are in place. There is an interesting argument to be had about fair use, and taking inspiration from popular works to make a new product which incorporates functionalities which people loved in prior games.
+
+\section{Introduction}
+Through out the years with the advancements in technology specifically in the niche area of video game creation, the animation style of the games and characters have drawn inspiration from one another and different anime design artist.
+This has caused for the probing and enforcement of litigation to protect the intellectual rights to the created property, this has been an ongoing issue for a while now in the genre 
+
+
+
+
+
+\end{document}
